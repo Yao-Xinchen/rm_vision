@@ -53,8 +53,10 @@ def generate_launch_description():
         cam_detector = get_camera_detector_container(mv_camera_node)
 
     serial_driver_node = Node(
-        package='rm_serial_driver',
-        executable='rm_serial_driver_node',
+        # package='rm_serial_driver',
+        package='solais_serial',
+        # executable='rm_serial_driver_node',
+        executable='solais_serial_legacy_node',
         name='serial_driver',
         output='both',
         emulate_tty=True,
